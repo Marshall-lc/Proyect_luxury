@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegancia en Movimiento | Autos de Lujo Exclusivos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="luxury-header">
+        <nav class="container">
+            <div class="logo">MLC LUXURY MOTORS</div>
+            <ul class="nav-links">
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#exclusivos">Colección</a></li>
+                <li><a class="cta-nav" href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content container">
+            <h1 class="main-title">Redefiniendo el Lujo y la Potencia</h1>
+            <p class="subtitle">Descubra una colección curada de vehículos que combinan arte, ingeniería y una exclusividad inigualable.</p>
+            <a href="#modelos" class="cta-button primary-cta">Explorar la Colección</a>
+        </div>
+    </section>
+
+    <section id="modelos" class="featured-models container">
+        <h2 class="section-title">Modelos en Exhibición</h2>
+        <div class="model-gallery">
+            <div class="model-card">
+                <div class="model-image model-image-1"></div>
+                <h3 class="model-name">El Vencedor GT</h3>
+                <p class="model-spec">Motor V12 Twin-Turbo | Interior de Cuero Italiano | Edición Limitada</p>
+                <a href="#" class="cta-button secondary-cta" data-model="Vencedor GT">Ver Detalles</a>
+            </div>
+            <div class="model-card">
+                <div class="model-image model-image-2"></div>
+                <h3 class="model-name">La Élite Sedan</h3>
+                <p class="model-spec">Híbrido de Alto Rendimiento | Tecnología Autónoma Avanzada | Comodidad Suprema</p>
+                <a href="#" class="cta-button secondary-cta" data-model="Élite Sedan">Ver Detalles</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="exclusivos" class="luxury-promise">
+        <div class="container">
+            <h2 class="section-title white-text">Nuestra Promesa de Exclusividad</h2>
+            <p class="promise-text">Más que autos, son declaraciones. Cada vehículo es seleccionado y verificado por su pedigrí y perfección.</p>
+            <div class="promise-features">
+                <div class="feature-item">
+                    <span class="feature-icon">✨</span>
+                    <h4>Curación Experta</h4>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🔑</span>
+                    <h4>Acceso Privado</h4>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🛡️</span>
+                    <h4>Garantía de Origen</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Solicite su Asesoría Personalizada</h2>
+            <form id="contact-form" class="luxury-form">
+                <input type="text" id="nombre" placeholder="Nombre Completo" required>
+                <input type="email" id="email" placeholder="Correo Electrónico" required>
+                <textarea id="mensaje" placeholder="Modelo de interés o consulta específica" required></textarea>
+                <button type="submit" class="cta-button primary-cta">Enviar Solicitud Privada</button>
+            </form>
+            <p id="form-message" class="hidden"></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 EON LUXURY MOTORS. Todos los derechos reservados. | Privacidad | Términos</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

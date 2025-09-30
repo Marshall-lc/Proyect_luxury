@@ -1,0 +1,428 @@
+/* Variables de Color y Tipografía */
+:root {
+    --color-dark: #0f0f0f; /* Negro profundo para fondo */
+    --color-light: #f4f4f4; /* Gris claro para texto principal */
+    --color-accent: #a0885e; /* Dorado/Champán para acentos de lujo */
+    --color-gray: #333333; /* Gris carbón para contenedores */
+    --font-serif: 'Playfair Display', serif; /* Elegante, para títulos */
+    --font-sans: 'Roboto', sans-serif; /* Profesional, para cuerpo */
+}
+
+/* Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* Header y Navegación */
+.luxury-header {
+    background: var(--color-dark);
+    border-bottom: 1px solid var(--color-gray);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.luxury-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 1.1em;
+    padding: 5px 10px;
+}
+
+.cta-nav {
+    border: 1px solid var(--color-accent);
+    padding: 8px 15px;
+    border-radius: 3px;
+    color: var(--color-accent);
+}
+
+.cta-nav:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+}
+
+/* Botones (CTAs) */
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.primary-cta {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    border: 2px solid var(--color-accent);
+}
+
+.primary-cta:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+}
+
+.secondary-cta {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+}
+
+.secondary-cta:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+}
+
+/* Sección Hero (Principal) */
+.hero-section {
+    height: 100vh;
+    background: url('https://luxurypulse.com/img/pictures/67e6f584e3386t%2814%29.jpeg') no-repeat center center/cover; /* Reemplazar con imagen real */
+    display: flex;
+    align-items: center;
+    text-align: left;
+    position: relative;
+    padding-top: 60px;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay oscuro para legibilidad */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-left: 5%;
+}
+
+.main-title {
+    font-size: 4.5em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    max-width: 800px;
+    color: var(--color-light);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    max-width: 600px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Secciones Generales */
+section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3em;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.white-text {
+    color: var(--color-light);
+}
+
+/* Modelos Destacados */
+.featured-models {
+    background-color: var(--color-dark);
+}
+
+.model-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.model-card {
+    background-color: var(--color-gray);
+    padding: 30px;
+    width: 45%; /* Dos tarjetas por fila en escritorio */
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.model-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(160, 136, 94, 0.3); /* Sombra con acento dorado */
+}
+
+.model-image {
+    height: 250px;
+    background: var(--color-dark) center center/cover;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 1px solid var(--color-gray);
+}
+
+/* Clases de placeholder para imágenes de modelos */
+.model-image-1 {
+    /* Reemplazar con imagen del Vencedor GT */
+    background-image: url('https://img.classistatic.de/api/v1/mo-prod/images/6c/6ce43039-54f7-4bcd-b435-ad11ddc0c437?rule=mo-640.jpg'); 
+}
+.model-image-2 {
+    /* Reemplazar con imagen de La Élite Sedan */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRFhRfSe8_hxIfqk-4WMYo4777ILA28ZYFtA&s');
+}
+
+.model-name {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--color-accent);
+}
+
+.model-spec {
+    color: #cccccc;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* Promesa de Lujo */
+.luxury-promise {
+    background-color: var(--color-gray);
+    border-top: 1px solid var(--color-dark);
+    border-bottom: 1px solid var(--color-dark);
+}
+
+.promise-text {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: #e0e0e0;
+}
+
+.promise-features {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    width: 30%;
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--color-accent);
+}
+
+.feature-item h4 {
+    font-size: 1.4em;
+    color: var(--color-light);
+}
+
+/* Contacto y Formulario */
+.contact-section {
+    background-color: var(--color-dark);
+    padding: 80px 0;
+}
+
+.luxury-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.luxury-form input,
+.luxury-form textarea {
+    padding: 15px;
+    border: 1px solid var(--color-gray);
+    background-color: #222222;
+    color: var(--color-light);
+    font-size: 1em;
+    border-radius: 3px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.luxury-form input:focus,
+.luxury-form textarea:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 5px rgba(160, 136, 94, 0.5);
+}
+
+.luxury-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.luxury-form .primary-cta {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+#form-message {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: var(--color-accent);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-gray);
+    border-top: 1px solid var(--color-dark);
+    padding: 20px 0;
+    font-size: 0.9em;
+    text-align: center;
+    color: #aaaaaa;
+}
+
+/* ======================================= */
+/* MEDIA QUERIES PARA RESPONSIVIDAD (UX)   */
+/* ======================================= */
+
+/* 1. Pantallas medianas (Tablets, hasta 1024px) */
+@media (max-width: 1024px) {
+    .main-title {
+        font-size: 3.5em; /* Reducir títulos principales */
+    }
+    
+    .section-title {
+        font-size: 2.5em; /* Reducir títulos de sección */
+    }
+
+    .model-card {
+        width: 48%; /* Pequeño ajuste para mejor espaciado */
+    }
+}
+
+
+/* 2. Pantallas pequeñas (Móviles, hasta 768px) */
+@media (max-width: 768px) {
+    /* Header/Navegación */
+    .luxury-header .container {
+        justify-content: center; /* Centrar el logo */
+    }
+    .nav-links {
+        display: none; /* Ocultar links de navegación para simplificar la UX móvil */
+    }
+
+    /* Hero */
+    .hero-content {
+        text-align: center;
+        padding-left: 0;
+        /* Padding superior para que el contenido no quede justo debajo del header */
+        padding-top: 100px; 
+    }
+    .main-title {
+        font-size: 2.5em; /* Título principal aún más pequeño */
+    }
+    .subtitle {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    /* Secciones */
+    section {
+        padding: 60px 0; /* Menos padding vertical */
+    }
+    .section-title {
+        font-size: 2em;
+    }
+
+    /* Modelos */
+    .model-gallery {
+        flex-direction: column; /* Apilar tarjetas en una sola columna */
+        align-items: center;
+        gap: 30px;
+    }
+    .model-card {
+        width: 90%; /* Ancho completo para una mejor visualización del auto */
+    }
+    .model-image {
+        height: 200px;
+    }
+    
+    /* Promesa de Lujo */
+    .promise-features {
+        flex-direction: column; /* Apilar características */
+        gap: 30px;
+    }
+    .feature-item {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Formulario */
+    .luxury-form .primary-cta {
+        align-self: center; /* Centrar el botón de CTA en móvil */
+        width: 100%;
+    }
+}
